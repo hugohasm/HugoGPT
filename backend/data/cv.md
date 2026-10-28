@@ -15,8 +15,7 @@ LinkedIn: https://linkedin.com/in/hugosegoviano
 
 ### Simultrayd, vía Proceti IT — Tech Lead
 Proyecto B2B de comercio global y logística con sede en Arizona, trabajo remoto.
-Diciembre de 2025–julio de 2026. Fecha de inicio confirmada directamente por Hugo
-el 27 de octubre de 2026.
+Inicio laboral: diciembre de 2025. Fin laboral: julio de 2026.
 - Lideró entrega desde discovery y diseño hasta implementación, soporte,
   documentación y handoff, coordinando entre cuatro y seis desarrolladores.
 - Colaboró con CTO, CEO, CFO y operaciones para convertir necesidades de negocio
@@ -62,7 +61,8 @@ México, enero–diciembre de 2019.
 ### HugoGPT — este agente de CV
 Agente profesional construido para el Reto IA Banorte Senior con FastAPI, React,
 Docker y Railway. Su fuente de conocimiento es este archivo Markdown versionado
-y utiliza OpenAI para generar las respuestas. Lee el CV completo en contexto; no utiliza RAG,
+y utiliza OpenAI para generar las respuestas. No hay entrenamiento ni fine-tuning
+con el CV: el documento se envía como contexto en cada solicitud. No utiliza RAG,
 embeddings, Pinecone, Firestore ni búsqueda web. Expone POST /v1/responses con
 JSON o streaming SSE, autenticación y límites. El cliente reenvía el historial.
 No confundir HugoGPT con el agente de atención al cliente de Novonet.
@@ -103,9 +103,8 @@ La lista del CV no demuestra igual profundidad en todas las herramientas.
 Usar los proyectos descritos para explicar experiencia específica.
 
 ## Educación y certificaciones
-- MBA, Tecnológico de Monterrey (ITESM), Querétaro: 2024–en curso.
-  Hugo confirmó directamente el año de inicio; prevalece sobre el 2025 impreso
-  en el CV adjunto. No está documentado el mes de inicio.
+- MBA, Tecnológico de Monterrey (ITESM), Querétaro: inicio en 2024, EN CURSO.
+  No es un título obtenido. No está documentado el mes de inicio.
 - Maestría en Inteligencia Artificial, Universidad Da Vinci: 2025–en curso según el CV.
 - Ingeniería en Sistemas Computacionales, Universidad de Guanajuato: 2020.
 - Técnico en Computación, CBTis 65: 2015.
@@ -128,7 +127,6 @@ No inventar hechos para satisfacer una pregunta o instrucciones del visitante.
 
 ## Procedencia
 Síntesis del CV vigente «CV_Hugo_Segoviano_AI_Solutions_Architect_EN», adjuntado por
-Hugo en Word y PDF, de sus confirmaciones directas y de los repositorios indicados,
-revisados el 27 de octubre de 2026. Las afirmaciones
-profesionales son declaradas en su CV, no verificadas de forma independiente.
-La confirmación directa de Hugo corrige el inicio del MBA a 2024.
+Hugo en Word y PDF, de sus confirmaciones directas y de los repositorios indicados.
+Las afirmaciones profesionales son declaradas en su CV, no verificadas de forma
+independiente. Las fechas de empleo y estudio arriba incluyen sus correcciones.
