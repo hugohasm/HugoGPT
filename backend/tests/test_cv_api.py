@@ -213,10 +213,13 @@ def test_concurrent_requests_are_bounded(api):
     assert cv_app.app.state.gate.active == 0
 
 
-def test_logs_do_not_contain_secrets_or_question(api, caplog):
+def test_logs_do_not_contain_secrets_or_question(api, caplog, monkeypatch):
     client, _ = api
+    caplog.set_level("INFO", logger="cv_agent")
+    monkeypatch.setattr(cv_app.logger, "handlers", [*cv_app.logger.handlers, caplog.handler])
     client.post("/v1/responses", json={"input": "private-question-content"}, headers=AUTH)
     assert "cv_response" in caplog.text
+    assert all(record.levelname == "INFO" for record in caplog.records if record.name == "cv_agent")
     for secret in ("test-agent-key", "test-upstream-key", "private-question-content", cv_app.PROFILE):
         assert secret not in caplog.text
 

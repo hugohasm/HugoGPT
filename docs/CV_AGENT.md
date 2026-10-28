@@ -145,3 +145,26 @@ aceptación funcional se valida con una conversación real después del desplieg
 - [Open Responses, referencia](https://www.openresponses.org/reference), versión 2026-04-24.
 - [OpenAI Responses](https://developers.openai.com/api/reference/typescript/resources/responses/methods/create).
 - [Streaming Responses](https://developers.openai.com/api/docs/guides/streaming-responses).
+
+## Operación de esta entrega
+
+La instancia publicada se desplegó con Railway CLI. GitHub ejecuta CI; actualmente
+no hay conexión de autodespliegue configurada entre GitHub y Railway. Para publicar
+cambios ya probados desde la carpeta del proyecto:
+
+```bash
+railway login
+railway link
+# Seleccionar HugoGPT, production y el servicio HugoGPT.
+railway up --detach
+railway logs --build --latest --lines 40
+```
+
+No ejecutar `railway variables` en una grabación: puede mostrar secretos. En el
+dashboard están configuradas las credenciales privadas, `PORT=8000`, una réplica
+y Healthcheck Path `/health`. El `Dockerfile` ejecuta un worker.
+
+En Banorte, el agente **HugoGPT** ya está registrado con transcripción sin estado,
+`store=false`, selector `hugo-cv` y Bearer del agente. Se verificaron tres turnos
+reales, incluido seguimiento. Para la demostración, entrar a Agentes → HugoGPT →
+Chatear. No hace falta pegar la clave de OpenAI ni volver a registrar el agente.

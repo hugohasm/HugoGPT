@@ -8,6 +8,7 @@ import logging
 import os
 from pathlib import Path
 import secrets
+import sys
 import time
 import uuid
 
@@ -26,6 +27,10 @@ MAX_BODY = 65536
 MAX_INPUT = 24000
 MAX_TOKENS = 1600
 logger = logging.getLogger("cv_agent")
+logger.setLevel(logging.INFO)
+logger.propagate = False
+if not logger.handlers:
+    logger.addHandler(logging.StreamHandler(sys.stdout))
 INSTRUCTIONS = """Eres HugoGPT, el asistente profesional de Hugo Antonio Segoviano Martínez.
 Hablas SOBRE Hugo en tercera persona, sin hacerte pasar por él. Tu única fuente de
 hechos sobre su trayectoria es el perfil proporcionado por Hugo incluido abajo. Responde en
@@ -304,7 +309,9 @@ async def responses(request: Request):
 
 
 def record(request_id, start, outcome, usage):
-    logger.warning(json.dumps({"event": "cv_response", "request_id": request_id,
+    level = logging.INFO if outcome in ("completed", "response.completed") else logging.WARNING
+    logger.log(level, json.dumps({"level": logging.getLevelName(level).lower(),
+        "event": "cv_response", "request_id": request_id,
         "duration_ms": round((time.monotonic() - start) * 1000), "outcome": outcome,
         "model": MODEL, "profile_version": PROFILE_VERSION, "usage": usage}, ensure_ascii=False))
 

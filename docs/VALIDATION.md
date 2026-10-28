@@ -51,3 +51,27 @@ por ID. Las revisiones de contenido asistidas por IA no son una certificación
 independiente ni garantizan todos los casos futuros.
 
 El estado final de CI, despliegue e integración se registra aquí una vez comprobado.
+
+## Resultado de entrega
+
+- **Código:** repositorio público [hugohasm/HugoGPT](https://github.com/hugohasm/HugoGPT), con historial propio.
+- **CI:** [ejecución 40610764366](https://github.com/hugohasm/HugoGPT/actions/runs/40610764366) exitosa para `7f6fb89`: pytest en Python 3.11/3.12, Vite y Docker.
+- **API pública:** HTTPS operativo; `/health` y `/api/app-config` devuelven 200. Una solicitud sin token devuelve 401.
+- **Perfil desplegado:** `3fdb8e2d21e9`, coincidente con el Markdown local.
+- **Modelo real:** once respuestas HTTP 200 y streaming con deltas y `response.completed`.
+- **Contenido:** diez rúbricas aprobadas y una aprobada con observación en revisión asistida por Codex. En la comparación con RAG Assistant, la respuesta describe un despliegue cuando el código revisado acredita configuración, sin confirmar disponibilidad actual. No se presenta esa afirmación como evidencia operativa de ese otro proyecto.
+- **Latencia externa:** mediana de 1,569 ms en diez preguntas individuales; rango 813–3,380 ms. Es una muestra puntual, no un SLA.
+- **Banorte:** HugoGPT registrado; conversación real de tres turnos completada. Explicó su arquitectura, mantuvo el referente del frontend, respondió Proceti diciembre de 2025 y MBA 2024 en curso, y reconoció que no conoce salario ni disponibilidad.
+- **UI pública:** respuesta real comprobada en Chrome con la clave del agente.
+
+[Evidencia de evaluación](evaluation-2026-10-27.json), ejecutada el 27 de octubre
+en America/Mexico_City (el archivo conserva timestamp UTC del día 28). El commit
+registrado identifica el prompt evaluado. Los ajustes posteriores de nivel de
+logging no modifican ese prompt ni el perfil.
+
+En una evaluación previa se detectó que el modelo confundía la fecha de una
+confirmación con el inicio laboral y describía el contexto como entrenamiento.
+Se eliminaron fechas administrativas del perfil enviado al modelo y se aclaró
+que no existe fine-tuning. La nueva evaluación y la conversación de Banorte
+comprobaron las correcciones. Estos hallazgos justifican mantener evaluaciones
+al modificar el perfil.
