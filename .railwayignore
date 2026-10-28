@@ -1,0 +1,15 @@
+.git/
+.venv/
+**/venv/
+**/node_modules/
+**/.env
+**/.env.*
+**/*.key
+**/*.pem
+**/__pycache__/
+**/*.pyc
+frontend/dist/
+backend/static/
+artifacts/
+.pytest_cache/
+.DS_Store
