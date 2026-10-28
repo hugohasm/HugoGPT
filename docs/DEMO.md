@@ -37,3 +37,9 @@ de alucinaciones y que las pruebas simuladas no sustituyen evaluaciones reales.
 “Acepté historial en cliente y una sola réplica para una demo acotada. Si crece,
 añadiría cuotas compartidas y almacenamiento por usuario. Antes de incorporar
 RAG mediría si el corpus o las evaluaciones lo justifican.”
+
+## Preparación para preguntas
+
+Revisar [Defensa técnica](DEFENSA_TECNICA.md): presupuesto de contexto, compactación
+futura, memoria, límites, evaluación, seguridad, observabilidad y escalamiento.
+Incluye treinta preguntas con respuestas basadas en el código y la evidencia.

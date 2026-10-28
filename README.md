@@ -74,6 +74,7 @@ con rúbricas. Los tests simulados no demuestran por sí solos la calidad del mo
 - [Ejecución, contrato, despliegue e integración Banorte](docs/CV_AGENT.md)
 - [Validación y límites](docs/VALIDATION.md)
 - [Guion de demostración](docs/DEMO.md)
+- [Defensa técnica: contexto y 30 preguntas difíciles](docs/DEFENSA_TECNICA.md)
 
 ## Límites
 
